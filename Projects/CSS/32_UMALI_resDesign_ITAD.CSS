@@ -1,0 +1,55 @@
+body{
+  border: solid 0.25em;
+  border-color: black;
+  padding: 1em 1.5em 1em 1.5em;
+  font-family: Arial, Tahoma, Verdana;
+  font-size: 1.125em;
+  background-color: #FFDAB9;
+  color: #000000;
+}
+blockquote{
+  border: solid 0.25em;
+  border-color: black;
+  padding: 1em 1.5em 1em 1.5em;
+}
+h1{
+  font-family: "Arial Black", Arial, Tahoma, Verdana;
+  text-align: center;
+  position: relative;
+  top: -2.75em;
+}
+h2{
+  font-family: Arial, Tahoma, Verdana;
+}
+h5{
+  font-family: "Arial Black", Arial, Tahoma, Verdana;
+  text-align: center;
+  position: relative;
+  top: -5.75em;
+}
+hr{
+  border: 1.125em solid #000000;
+  border-radius: 1.125em;
+}
+img{
+  position: relative;
+  left: auto;
+}
+a{
+  background-color: #DEB897;
+  color: #000000;
+  padding: 0.5em 1em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a:hover{
+  background-color: #C4966E;
+}
+a:active{
+  box-shadow: none;
+  top: 0.3125em;
+}
+p{
+  text-align: right;
+}

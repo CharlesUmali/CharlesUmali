@@ -1,0 +1,53 @@
+body{
+  background-color: #FFDAB9;
+  font-family: "Comic Sans MS", Arial;
+  font-size: 1.125em;
+}
+
+h1{
+  text-align: center;
+}
+
+hr{
+  border: 0.625em solid #000000;
+  border-radius: 0.3125em;
+}
+
+.flex-container {
+  display: flex;
+  background-color: #DEB897;
+  flex-flow: row wrap;
+}
+
+.flex-container > div {
+  background-color: #FAE3CF;
+  margin: 0.625em;
+  padding: 1.25em;
+  font-size: 1.125em;
+}
+
+.button {
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+a{
+  padding: 1em 1.5em;
+  position: relative;
+  text-decoration: none;
+}
+
+a:visited{
+  color: #6A0DAD;
+}
+
+a:hover{
+  color: #FF0000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+a:active{
+  color: #0000FF;
+}
