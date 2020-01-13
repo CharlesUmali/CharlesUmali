@@ -1,0 +1,39 @@
+body{
+  background-color: #FFDAB9;
+  font-family: "Comic Sans MS", Arial;
+  font-size: 1.125em;
+}
+
+h1{
+  text-align: center;
+}
+
+hr{
+  border: 0.625em solid #000000;
+  border-radius: 0.3125em;
+}
+
+a{
+  background-color: #FCB372;
+  box-shadow: 0 0.3125em 0 #CF925D;
+  color: #000000;
+  padding: 0.5em 1em;
+  position: relative;
+  text-decoration: none;
+}
+
+a:hover{
+  background-color: #DEAA7C;
+  box-shadow: none;
+  top: 5px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+a:visited{
+  color: #6A0DAD;
+}
+
+p{
+  text-align: right;
+}
