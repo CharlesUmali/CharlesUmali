@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+
+<html lang="en";>
+<head>
+  <meta charset="utf-8";>
+  <link rel = "stylesheet" type = "text/css" href = "" />
+  <style type="text/css";>
+    body{
+      padding: 25px;
+      margin: auto;
+      width: 68%;
+      background-color: #FFAE8F;
+    }
+    .layerZero{
+      display: inline-block;
+      padding: 10px;
+      background-color: #DEDDFA
+    }
+    .layerOne{
+      display: inline-block;
+      margin-left: auto;
+      background-color: #DAB8F3
+    }
+    .layerTwo{
+      display: inline-block;
+      background-color: #DAB8F3
+    }
+    .layerThree{
+      display: inline-block;
+      margin-right: auto;
+      background-color: #DAB8F3
+    }
+    .layerFour{
+      display: inline-block;
+      margin-left: auto;
+      background-color: #DAB8F3
+    }
+    .layerFive{
+      display: inline-block;
+      background-color: #DAB8F3
+    }
+    .layerSix{
+      display: inline-block;
+      margin-right: auto;
+      background-color: #DAB8F3
+    }
+    .flip-box {
+      background-color: transparent;
+      width: 300px;
+      height: 200px;
+      border: 1px solid #F1F1F1;
+      perspective: 1000px;
+    }
+    .flip-box-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .flip-box:hover .flip-box-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-box-front, .flip-box-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+    .flip-box-front {
+      background-color: #9399FF;
+    }
+
+    .flip-box-back {
+      background-color: #5f6CAF;
+      color: #FFFFFF;
+      transform: rotateY(180deg);
+      font-size: 11px;
+      font-family: "Comic Sans MS";
+    }
+    img{
+      width: 300px;
+      height: 200px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="layerZero">
+    <div class="layerOne">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img src="../Images/Twice.jpg" alt="Twice">
+          </div>
+          <div class="flip-box-back">
+            <h4>Twice</h4>
+            <hr>
+            <blockquote>Twice is a South Korean girl group formed by JYP Entertainment through the 2015 reality show Sixteen. The group is composed of nine members: Nayeon, Jeongyeon, Momo, Sana, Jihyo, Mina, Dahyun, Chaeyoung, and Tzuyu. The group debuted on October 20, 2015, with the extended play (EP) The Story Begins.</blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layerTwo">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img src="../Images/Red Velvet.jpg" alt="Red Velvet">
+          </div>
+          <div class="flip-box-back">
+            <h4>Red Velvet</h4>
+            <hr>
+            <blockquote>Red Velvet is a South Korean girl group formed by SM Entertainment. The group debuted on August 1, 2014, with the digital single "Happiness" and four group members: Irene, Seulgi, Wendy, and Joy. In March 2015, Yeri was added into the group.</blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layerThree">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img src="../Images/Oh My Girl.png" alt="Oh My Girl">
+          </div>
+          <div class="flip-box-back">
+            <h4>Oh My Girl</h4>
+            <hr>
+            <blockquote>Oh My Girl is a South Korean girl group formed by WM Entertainment. The group is composed of seven members: Hyojung, Mimi, YooA, Seunghee, Jiho, Binnie and Arin. Originally an eight-piece group, JinE left the group in October 2017 due to health issues. Oh My Girl debuted on April 20, 2015, with an eponymous extended play.</blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br> <br>
+
+    <div class="layerFour">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img src="../Images/IZone.jpg" alt="IZ*One">
+          </div>
+          <div class="flip-box-back">
+            <h4>IZ*One</h4>
+            <hr>
+            <blockquote>Iz*One is a South Korean–Japanese girl group formed through the Mnet reality competition show Produce 48. The group is composed of twelve members: Jang Won-young, Sakura Miyawaki, Jo Yu-ri, Choi Ye-na, Ahn Yu-jin, Nako Yabuki, Kwon Eun-bi, Kang Hye-won, Hitomi Honda, Kim Chae-won, Kim Min-ju and Lee Chae-yeon.</blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layerFive">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img src="../Images/Fromis_9.jpg" alt="Fromis_9">
+          </div>
+          <div class="flip-box-back">
+            <h4>Fromis_9</h4>
+            <hr>
+            <blockquote>Fromis 9, stylized as fromis_9, is a South Korean girl group formed by CJ E&M through the 2017 reality show Idol School. The group is composed of nine members: Roh Ji-sun, Song Ha-young, Lee Sae-rom, Lee Chae-young, Lee Na-gyung, Park Ji-won, Lee Seo-yeon, Baek Ji-heon and Jang Gyu-ri.</blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layerSix">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img src="../Images/Itzy.jpg" alt="Itzy">
+          </div>
+          <div class="flip-box-back">
+            <h4>Itzy</h4>
+            <hr>
+            <blockquote>Itzy is a South Korean girl group formed by JYP Entertainment, consisting of members Yeji, Lia, Ryujin, Chaeryeong, and Yuna. The group debuted on February 12, 2019, with the release of their single album, It'z Different.</blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
