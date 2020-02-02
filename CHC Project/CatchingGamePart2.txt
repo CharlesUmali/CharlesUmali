@@ -1,0 +1,120 @@
+package com.codingwithsara.moveimage;
+
+import android.graphics.drawable.Drawable;
+import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class MainActivity extends AppCompatActivity implements View.OnTouchListener {
+
+    private ImageView box;
+    private FrameLayout frame;
+    private Drawable imageBoxRight, imageBoxLeft;
+    private float boxX, boxY;
+    private boolean action_up, action_down, action_left, action_right;
+
+    private Timer timer = new Timer();
+    private Handler handler = new Handler();
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        box = findViewById(R.id.box);
+        frame = findViewById(R.id.frame);
+        imageBoxLeft = getResources().getDrawable(R.drawable.box_left);
+        imageBoxRight = getResources().getDrawable(R.drawable.box_right);
+
+        findViewById(R.id.upBtn).setOnTouchListener(this);
+        findViewById(R.id.downBtn).setOnTouchListener(this);
+        findViewById(R.id.leftBtn).setOnTouchListener(this);
+        findViewById(R.id.rightBtn).setOnTouchListener(this);
+
+        // Start the timer
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        changePos();
+                    }
+                });
+            }
+        }, 0, 20);
+    }
+
+    public void changePos() {
+        boxX = box.getX();
+        boxY = box.getY();
+
+        // Up
+        if (action_up) boxY -= 20;
+
+        // Down
+        if (action_down) boxY += 20;
+
+        // Left
+        if (action_left) {
+            boxX -= 20;
+            box.setImageDrawable(imageBoxLeft);
+        }
+
+        // Right
+        if (action_right) {
+            boxX += 20;
+            box.setImageDrawable(imageBoxRight);
+        }
+
+        // Vertical Move
+        if (boxY < 0) boxY = 0;
+        if (boxY > frame.getHeight() - box.getHeight()) boxY = frame.getHeight() - box.getHeight();
+
+        // Horizontal Move
+        if (boxX < 0) {
+            boxX = 0;
+            box.setImageDrawable(imageBoxRight);
+        }
+        if (boxX > frame.getWidth() - box.getWidth()) {
+            boxX = frame.getWidth() - box.getWidth();
+            box.setImageDrawable(imageBoxLeft);
+        }
+
+        box.setX(boxX);
+        box.setY(boxY);
+    }
+
+    @Override
+    public boolean onTouch(View view, MotionEvent motionEvent) {
+        if (motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+            switch (view.getId()) {
+                case R.id.upBtn:
+                    action_up = true;
+                    break;
+                case R.id.downBtn:
+                    action_down = true;
+                    break;
+                case R.id.leftBtn:
+                    action_left = true;
+                    break;
+                case R.id.rightBtn:
+                    action_right = true;
+                    break;
+            }
+        } else {
+            action_up = false;
+            action_down = false;
+            action_left = false;
+            action_right = false;
+        }
+        return true;
+    }
+}
