@@ -13,7 +13,7 @@ hr{
   border-radius: 0.3125em;
 }
 
-a{
+a:link{
   background-color: #FCB372;
   box-shadow: 0 0.3125em 0 #CF925D;
   color: #000000;
@@ -32,6 +32,11 @@ a:hover{
 
 a:visited{
   color: #6A0DAD;
+}
+
+a{
+  display: inline-block;
+  width: 12%;
 }
 
 p{
