@@ -5,6 +5,10 @@ body{
   height: 100%;
   background-color: #FFDAB9;
 }
+h1{
+  text-align: center;
+  font-family: "Comic Sans MS";
+}
 .layerZero{
   display: inline-block;
   padding: 10px;
@@ -98,8 +102,8 @@ img{
   cursor: pointer;
   margin-right: auto;
   position: absolute;
-  left: 75%;
-  top: 142%;
+  left: 74%;
+  top: 155%;
 }
 p{
   font-size: 1.125em;
