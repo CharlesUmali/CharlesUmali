@@ -1,0 +1,53 @@
+body{
+  background-color: #FFDAB9;
+  font-family: "Comic Sans MS", Arial;
+  font-size: 1.125em;
+  padding: 15px;
+}
+h1{
+  font-family: "Comic Sans MS", Arial;
+  text-align: center;
+  border: 15px solid #000000;
+  border-radius: 5px;
+  padding: 30px 15px 30px 15px;
+  font-style: italic;
+}
+h2{
+  font-family: "Comic Sans MS", Arial;
+  font-style: italic;
+  text-align: center;
+}
+blockquote{
+  border: 35px 40px 35px 40px;
+  border-style: solid;
+  border-color: #000000;
+  border-radius: 5px;
+  padding: 30px 25px 30px 25px;
+  font-family: "Comic Sans MS", Arial;
+  font-size: 1.125em;
+  font-weight: bold;
+}
+img{
+  width: 800px;
+  height: 600px;
+}
+
+a{
+  background-color: #DEB897;
+  color: #000000;
+  padding: 1em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+a:hover{
+  background-color: #C4966E;
+}
+a:active{
+  box-shadow: none;
+  top: 0.3125em;
+}
+p{
+  text-align: right;
+  font-family: "Comic Sans MS";
+}
