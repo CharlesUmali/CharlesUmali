@@ -90,22 +90,22 @@ img{
   width: 400px;
   height: 350px;
 }
-.button {
-  background-color: #D1A986;
-  border: solid #000000;
-  color: #FFFFFF;
-  padding: 15px 30px;
-  text-align: center;
+a{
+  background-color: #DEB897;
+  color: #000000;
+  padding: 1em;
+  position: relative;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  margin-right: auto;
-  position: absolute;
-  left: 74%;
-  top: 155%;
+  text-transform: uppercase;
+}
+a:hover{
+  background-color: #C4966E;
+}
+a:active{
+  box-shadow: none;
+  top: 0.3125em;
 }
 p{
-  font-size: 1.125em;
-  font-family: "Comics Sans MS";
+  text-align: right;
+  font-family: "Comic Sans MS";
 }
