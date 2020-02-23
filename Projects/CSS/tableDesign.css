@@ -1,0 +1,13 @@
+table,th,td{
+  border: 2px solid #000000;
+  background-color: #FFDAB9;
+}
+
+th{
+  font-family: "Comic Sans MS", Arial Black;
+  padding: 2px;
+}
+
+.null{
+  background-color: #C2C5CC;
+}
