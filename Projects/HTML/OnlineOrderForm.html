@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  body {
+    font-family: "Century Gothic", Arial;
+    font-size: 17px;
+    padding: 8px;
+  }
+  h2{
+    text-align: center;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  .col-25 {
+    -ms-flex: 25%;
+    flex: 25%;
+  }
+  .col-50 {
+    -ms-flex: 50%;
+    flex: 50%;
+  }
+  .col-75 {
+    -ms-flex: 75%;
+    flex: 75%;
+  }
+  .col-25, .col-50, .col-75 {
+    padding: 0 16px;
+  }
+  .container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+  input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  .btn:hover {
+    background-color: #45a049;
+  }
+  a {
+    color: #2196F3;
+  }
+  hr {
+    border: 1px solid lightgrey;
+  }
+  span.price {
+    float: right;
+    color: grey;
+  }
+  @media (max-width: 800px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }
+  input[type=image]{
+    width: 300px;
+    height: 200px;
+  }
+</style>
+</head>
+<body>
+  <h2>Online Order Form</h2>
+  <div class="row">
+    <div class="col-75">
+      <div class="container">
+        <form action="/action_page.php">
+
+          <div class="row">
+            <div class="col-50">
+              <h3>Billing Address</h3>
+              <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Charles Edward A. Umali" required>
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="email" name="email" placeholder="charlesumali@ue.edu.com" required>
+              <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+              <input type="text" id="adr" name="address" placeholder="160 San Salvador Street" required>
+              <label for="city"><i class="fa fa-institution"></i> City</label>
+              <input type="text" id="city" name="city" placeholder="Pasig City" required>
+
+              <div class="row">
+                <div class="col-50">
+                  <label for="baranggay">Baranggay</label>
+                  <input type="text" id="baranggay" name="baranggay" placeholder="Manggahan">
+                </div>
+                <div class="col-50">
+                  <label for="zip">Zip</label>
+                  <input type="text" id="zip" name="zip" placeholder="1611">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-50">
+              <h3>Payment</h3>
+              <label for="fname">Accepted Cards</label>
+              <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+              </div>
+              <label for="cname">Name on Card</label>
+              <input type="text" id="cname" name="cardname" placeholder="Charles Edward A. Umali">
+              <label for="ccnum">Credit card number</label>
+              <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+              <label for="expmonth">Expiration Month</label>
+              <input type="text" id="expmonth" name="expmonth" placeholder="September">
+              <div class="row">
+                <div class="col-50">
+                  <label for="expyear">Expiration Year</label>
+                  <input type="text" id="expyear" name="expyear" placeholder="2022">
+                </div>
+                <div class="col-50">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="129">
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <label>
+            <input type="checkbox" name="sameadr"> Shipping Address Same As Billing
+          </label>
+          <input type="submit" value="Continue To Checkout" class="btn" onclick="msg()">
+        </form>
+      </div>
+    </div>
+    <div class="col-50">
+      <div class="container">
+        <h4>Featured Products</h4>
+        <hr>
+        <label for="motherboards"><b>Motherboards:</b></label>
+        <input type="image" src="../Images/MSIMotherboard.jpg" alt="MSI Motherboard">
+        <input type="checkbox" name="MSI Motherboard" id="motherboards" placeholder="MSI Motherboard">MSI Motherboard $57.95
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="image" src="../Images/AsusMotherboard.jpg" alt="Asus Motherboard">
+        <input type="checkbox" name="Asus Motherboard" id="motherboards" placeholder="Asus Motherboard">ASUS Motherboard $65.00
+        <br>
+        <input type="image" src="../Images/ASRockMotherboard.png" alt="ASRock Motherboard">
+        <input type="checkbox" name="ASRock Motherboard" id="motherboards" placeholder="ASRock Motherboard">ASRock Motherboard $62.50
+
+        <input type="image" src="../Images/TUFMotherboard.jpg" alt="TUF Motherboard">
+        <input type="checkbox" name="TUF Motherboard" id="motherboards" placeholder="TUF Motherboard">TUF Motherboard $69.75
+        <br>
+        <input type="image" src="../Images/RyzenMotherboard.jpg" alt="Ryzen Motherboard">
+        <input type="checkbox" name="Ryzen Motherboard" id="motherboards" placeholder="Ryzen Motherboard">Ryzen Motherboard $73.00
+      </div>
+
+      <div class="container">
+        <br>
+        <label for="memory"><b>Memory Cards:</b></label>
+        <input type="image" src="../Images/EliteMemory.jpg" alt="Elite Memory">
+        <input type="checkbox" name="Elite Memory" id="memory" placeholder="Elite Memory">Elite Memory $52.95
+
+        &nbsp;&nbsp;<input type="image" src="../Images/HyperXMemory.jpg" alt="Hyper X Memory">
+        <input type="checkbox" name="Hyper X Memory" id="memory" placeholder="Hyper X Memory">Hyper X Memory $61.02
+        <br>
+        <input type="image" src="../Images/KllisreMemory.jpg" alt="Kllisre Memory">
+        <input type="checkbox" name="Kllisre Memory" id="memory" placeholder="Kllisre Memory">Kllisre Memory $64.20
+
+        <input type="image" src="../Images/KingBoxMemory.jpg" alt="King Box Memory">
+        <input type="checkbox" name="King Box Memory" id="memory" placeholder="King Box Memory">King Box Memory $89.75
+        <br>
+        <input type="image" src="../Images/CorsairVengeanceMemory.jpg" alt="Corsair Vengeance Memory">
+        <input type="checkbox" name="Corsair Vengeance Memory" id="memory" placeholder="Corsair Vengeance Memory">Corsair Vengeance Memory $73.00
+      </div>
+
+      <div class="container">
+        <br>
+        <label for="videocards"><b>Video Cards:</b></label>
+        <input type="image" src="../Images/GTX970.jpg" alt="GTX 970">
+        <input type="checkbox" name="GTX 970" id="videocards" placeholder="GTX 970">GTX 970 $68.99
+
+        &nbsp;&nbsp;<input type="image" src="../Images/GTX710.jpg" alt="GTX 710">
+        <input type="checkbox" name="GTX 710" id="videocards" placeholder="GTX 710">GTX 710 $59.15
+        <br>
+        <input type="image" src="../Images/GTX1050.jpg" alt="GTX 1050">
+        <input type="checkbox" name="GTX 1050" id="videocards" placeholder="GTX 1050">GTX 1050 $72.37
+
+        <input type="image" src="../Images/RX570.jpg" alt="RX 570">
+        <input type="checkbox" name="RX 570" id="videocards" placeholder="RX 570">RX 570 $59.75
+        <br>
+        <input type="image" src="../Images/GTX1060.jpg" alt="GTX 1060">
+        <input type="checkbox" name="GTX 1060" id="videocards" placeholder="GTX 1060">GTX 1060 $85.63
+      </div>
+
+      <div class="container">
+        <br>
+        <label for="fans"><b>Fans:</b></label>
+        <input type="image" src="../Images/SegotepFan.jpg" alt="Segotep Fan">
+        <input type="checkbox" name="Segotep Fan" id="fans" placeholder="Segotep Fan">Segotep Fan $50.00
+
+        <input type="image" src="../Images/DeepCoolFan.jpg" alt="DeepCool Fan">
+        <input type="checkbox" name="DeepCool Fan" id="fans" placeholder="DeepCool Fan">DeepCool Fan $45.00
+        <br>
+        <input type="image" src="../Images/KingBaoFan.jpg" alt="KingBao Fan">
+        <input type="checkbox" name="KingBao Fan" id="fans" placeholder="KingBao Fan">KingBao Fan $40.00
+
+        <input type="image" src="../Images/AeroCoolFan.jpg" alt="AeroCool Fan">
+        <input type="checkbox" name="AeroCool Fan" id="fans" placeholder="AeroCool Fan">AeroCool Fan $35.00
+        <br>
+        <input type="image" src="../Images/IntelFan.jpg" alt="Intel Fan">
+        <input type="checkbox" name="Intel Fan" id="fans" placeholder="Intel Fan">Intel Fan $ 30.00
+      </div>
+
+      <div class="container">
+        <br>
+        <label for="hdd"><b> :</b></label>
+        <input type="image" src="../Images/WesternHDD.jpg" alt="Western Digital HDD">
+        <input type="checkbox" name="Western Digital HDD" id="hdd" placeholder="Western Digital HDD">Western Digital HDD $90.00
+
+        <input type="image" src="../Images/SeagateHDD.png" alt="Seagate HDD">
+        <input type="checkbox" name="Seagate HDD" id="hdd" placeholder="Seagate HDD">Seagate HDD $85.00
+        <br>
+        <input type="image" src="../Images/ToshibaHDD.jpg" alt="Toshiba HDD">
+        <input type="checkbox" name="Toshiba HDD" id="hdd" placeholder="Toshiba HDD">Toshiba HDD $80.00
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="image" src="../Images/SiliconHDD.jpg" alt="Silicon Power HDD">
+        <input type="checkbox" name="Silicon Power HDD" id="hdd" placeholder="Silicon Power HDD">Silicon Power HDD $75.00
+        <br>
+        <input type="image" src="../Images/LacieHDD.jpg" alt="Lacie HDD">
+        <input type="checkbox" name="Lacie HDD" id="hdd" placeholder="Lacie HDD">Lacie HDD $70.00
+      </div>
+    </div>
+  </div>
+  <script>
+    function msg() {
+      confirm("Are You Sure You Want To Proceed?");
+    }
+  </script>
+</body>
+</html>
